@@ -1,0 +1,14 @@
+C:\Users\Admin\source\repos\DaoLib\DaoLib\bin\Debug\net5.0\DaoLib.deps.json
+C:\Users\Admin\source\repos\DaoLib\DaoLib\bin\Debug\net5.0\DaoLib.dll
+C:\Users\Admin\source\repos\DaoLib\DaoLib\bin\Debug\net5.0\ref\DaoLib.dll
+C:\Users\Admin\source\repos\DaoLib\DaoLib\bin\Debug\net5.0\DaoLib.pdb
+C:\Users\Admin\source\repos\DaoLib\DaoLib\obj\Debug\net5.0\DaoLib.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Admin\source\repos\DaoLib\DaoLib\obj\Debug\net5.0\DaoLib.AssemblyInfoInputs.cache
+C:\Users\Admin\source\repos\DaoLib\DaoLib\obj\Debug\net5.0\DaoLib.AssemblyInfo.cs
+C:\Users\Admin\source\repos\DaoLib\DaoLib\obj\Debug\net5.0\DaoLib.csproj.CoreCompileInputs.cache
+C:\Users\Admin\source\repos\DaoLib\DaoLib\obj\Debug\net5.0\DaoLib.dll
+C:\Users\Admin\source\repos\DaoLib\DaoLib\obj\Debug\net5.0\ref\DaoLib.dll
+C:\Users\Admin\source\repos\DaoLib\DaoLib\obj\Debug\net5.0\DaoLib.pdb
+C:\Users\Admin\source\repos\DaoLib\DaoLib\bin\Debug\net5.0\BeanLib.dll
+C:\Users\Admin\source\repos\DaoLib\DaoLib\bin\Debug\net5.0\BeanLib.pdb
+C:\Users\Admin\source\repos\DaoLib\DaoLib\obj\Debug\net5.0\DaoLib.csproj.CopyComplete

@@ -1,0 +1,16 @@
+C:\Users\Admin\source\repos\LinqEssentials\LinqEssentials\bin\Debug\net5.0\LinqEssentials.exe
+C:\Users\Admin\source\repos\LinqEssentials\LinqEssentials\bin\Debug\net5.0\LinqEssentials.deps.json
+C:\Users\Admin\source\repos\LinqEssentials\LinqEssentials\bin\Debug\net5.0\LinqEssentials.runtimeconfig.json
+C:\Users\Admin\source\repos\LinqEssentials\LinqEssentials\bin\Debug\net5.0\LinqEssentials.runtimeconfig.dev.json
+C:\Users\Admin\source\repos\LinqEssentials\LinqEssentials\bin\Debug\net5.0\LinqEssentials.dll
+C:\Users\Admin\source\repos\LinqEssentials\LinqEssentials\bin\Debug\net5.0\ref\LinqEssentials.dll
+C:\Users\Admin\source\repos\LinqEssentials\LinqEssentials\bin\Debug\net5.0\LinqEssentials.pdb
+C:\Users\Admin\source\repos\LinqEssentials\LinqEssentials\obj\Debug\net5.0\LinqEssentials.csproj.AssemblyReference.cache
+C:\Users\Admin\source\repos\LinqEssentials\LinqEssentials\obj\Debug\net5.0\LinqEssentials.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Admin\source\repos\LinqEssentials\LinqEssentials\obj\Debug\net5.0\LinqEssentials.AssemblyInfoInputs.cache
+C:\Users\Admin\source\repos\LinqEssentials\LinqEssentials\obj\Debug\net5.0\LinqEssentials.AssemblyInfo.cs
+C:\Users\Admin\source\repos\LinqEssentials\LinqEssentials\obj\Debug\net5.0\LinqEssentials.csproj.CoreCompileInputs.cache
+C:\Users\Admin\source\repos\LinqEssentials\LinqEssentials\obj\Debug\net5.0\LinqEssentials.dll
+C:\Users\Admin\source\repos\LinqEssentials\LinqEssentials\obj\Debug\net5.0\ref\LinqEssentials.dll
+C:\Users\Admin\source\repos\LinqEssentials\LinqEssentials\obj\Debug\net5.0\LinqEssentials.pdb
+C:\Users\Admin\source\repos\LinqEssentials\LinqEssentials\obj\Debug\net5.0\LinqEssentials.genruntimeconfig.cache

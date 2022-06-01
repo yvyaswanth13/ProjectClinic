@@ -1,0 +1,12 @@
+C:\Users\Admin\source\repos\BeanLib\BeanLib\bin\Debug\net5.0\BeanLib.deps.json
+C:\Users\Admin\source\repos\BeanLib\BeanLib\bin\Debug\net5.0\BeanLib.dll
+C:\Users\Admin\source\repos\BeanLib\BeanLib\bin\Debug\net5.0\ref\BeanLib.dll
+C:\Users\Admin\source\repos\BeanLib\BeanLib\bin\Debug\net5.0\BeanLib.pdb
+C:\Users\Admin\source\repos\BeanLib\BeanLib\obj\Debug\net5.0\BeanLib.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Admin\source\repos\BeanLib\BeanLib\obj\Debug\net5.0\BeanLib.AssemblyInfoInputs.cache
+C:\Users\Admin\source\repos\BeanLib\BeanLib\obj\Debug\net5.0\BeanLib.AssemblyInfo.cs
+C:\Users\Admin\source\repos\BeanLib\BeanLib\obj\Debug\net5.0\BeanLib.csproj.CoreCompileInputs.cache
+C:\Users\Admin\source\repos\BeanLib\BeanLib\obj\Debug\net5.0\BeanLib.dll
+C:\Users\Admin\source\repos\BeanLib\BeanLib\obj\Debug\net5.0\ref\BeanLib.dll
+C:\Users\Admin\source\repos\BeanLib\BeanLib\obj\Debug\net5.0\BeanLib.pdb
+C:\Users\Admin\source\repos\BeanLib\BeanLib\obj\Debug\net5.0\BeanLib.csproj.AssemblyReference.cache

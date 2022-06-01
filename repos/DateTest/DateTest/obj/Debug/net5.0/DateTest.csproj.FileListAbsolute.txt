@@ -1,0 +1,16 @@
+C:\Users\Admin\source\repos\DateTest\DateTest\bin\Debug\net5.0\DateTest.exe
+C:\Users\Admin\source\repos\DateTest\DateTest\bin\Debug\net5.0\DateTest.deps.json
+C:\Users\Admin\source\repos\DateTest\DateTest\bin\Debug\net5.0\DateTest.runtimeconfig.json
+C:\Users\Admin\source\repos\DateTest\DateTest\bin\Debug\net5.0\DateTest.runtimeconfig.dev.json
+C:\Users\Admin\source\repos\DateTest\DateTest\bin\Debug\net5.0\DateTest.dll
+C:\Users\Admin\source\repos\DateTest\DateTest\bin\Debug\net5.0\ref\DateTest.dll
+C:\Users\Admin\source\repos\DateTest\DateTest\bin\Debug\net5.0\DateTest.pdb
+C:\Users\Admin\source\repos\DateTest\DateTest\obj\Debug\net5.0\DateTest.csproj.AssemblyReference.cache
+C:\Users\Admin\source\repos\DateTest\DateTest\obj\Debug\net5.0\DateTest.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Admin\source\repos\DateTest\DateTest\obj\Debug\net5.0\DateTest.AssemblyInfoInputs.cache
+C:\Users\Admin\source\repos\DateTest\DateTest\obj\Debug\net5.0\DateTest.AssemblyInfo.cs
+C:\Users\Admin\source\repos\DateTest\DateTest\obj\Debug\net5.0\DateTest.csproj.CoreCompileInputs.cache
+C:\Users\Admin\source\repos\DateTest\DateTest\obj\Debug\net5.0\DateTest.dll
+C:\Users\Admin\source\repos\DateTest\DateTest\obj\Debug\net5.0\ref\DateTest.dll
+C:\Users\Admin\source\repos\DateTest\DateTest\obj\Debug\net5.0\DateTest.pdb
+C:\Users\Admin\source\repos\DateTest\DateTest\obj\Debug\net5.0\DateTest.genruntimeconfig.cache
