@@ -39,7 +39,7 @@ namespace ClinicMgmtSys
                     Console.WriteLine("Below Doctors having Specialization ");
                     foreach (var d in getByspec)
                     {
-                        Console.WriteLine(d.DoctorId + "- " + d.FName);
+                        Console.WriteLine(d.DoctorId + "- " + d.FName +"- timings:"+d.VisitingHour+"-"+d.LeavingHour);
 
                     }
                     Console.WriteLine("\n Enter Doctor Id");
@@ -53,8 +53,13 @@ namespace ClinicMgmtSys
                         Console.WriteLine("Wrong Date Format");
 
                     }
-
-                    Console.WriteLine("AppointMent Time");
+                    List<string> dt = cl.checkAvailability(docid, appdt);
+                    //Console.WriteLine(DateTime.Parse("11/04/2021") + "-" + dt.Count);
+                    foreach (var str in dt)
+                    {
+                        Console.Write(str+"\t");
+                    }
+                    Console.WriteLine("\nAppointMent Time");
                     string apptime = Console.ReadLine();
 
                     int succ = cl.ScheduleApp(new BeanLib.Appointment(appid, docid, pid, spec, appdt, apptime));
@@ -162,64 +167,80 @@ namespace ClinicMgmtSys
                 return false;
             }
         }
+       
         public static void Main(string[] args)
         {
-            Program p = new Program();
-            Console.WriteLine("User and Passwor are Case Sensitive ");
-            Console.WriteLine("Enter User: ");
-            string uname = Console.ReadLine();
-
-            Console.WriteLine("Enter Password: ");
-            string pass = Console.ReadLine();
-            Users u = new Users(uname, pass);
-            ClinicServiceImpl c = new ClinicServiceImpl();
-            if (p.frontEndValidation(u)&& c.UserCheck(u))
+            /*try
             {
-                
-            Console.WriteLine("Enter Your option \t\n1.Add Patient \n 2.Doctor Details \n 3.Book Appointment \n 4.Cancel AppointMent \n 5.LogOut");
-            
-                int op = Convert.ToInt32(Console.ReadLine());
-                switch (op)
+                ClinicServiceImpl cl = new ClinicServiceImpl();
+                List<string> dt = cl.checkAvailability(12, DateTime.Now);
+                Console.WriteLine(DateTime.Parse("11/04/2021") + "-" + dt.Count);
+                foreach(var str in dt)
                 {
-                    case 1:
-                        {
-                            p.addPatient();
-
-                            break;
-                        }
-                    case 2:
-                        {
-                            p.getDocDetails();
-                            break;
-                        }
-                    case 3:
-                        {
-                            p.AppointmentBooking();
-                            break;
-                        }
-                    case 4:
-                        {
-                            p.AppointmentCancel();
-                            break;
-                        }
-                    case 5:
-                        {
-                            Console.WriteLine("LogOut SuccessFully");
-                            break;
-                        }
-
-                    default:
-                        {
-                            Console.WriteLine("InValid Input");
-                            break;
-                        }
-
+                    Console.WriteLine(str);
                 }
+               
             }
-            else
+            catch(Exception e)
             {
-                Console.WriteLine("Invalid Credentials");
-            }
+                Console.WriteLine(e.Message);
+            }*/
+            Program p = new Program();
+             Console.WriteLine("User and Passwor are Case Sensitive ");
+             Console.WriteLine("Enter User: ");
+             string uname = Console.ReadLine();
+
+             Console.WriteLine("Enter Password: ");
+             string pass = Console.ReadLine();
+             Users u = new Users(uname, pass);
+             ClinicServiceImpl c = new ClinicServiceImpl();
+             if (p.frontEndValidation(u)&& c.UserCheck(u))
+             {
+
+             Console.WriteLine("Enter Your option \t\n1.Add Patient \n 2.Doctor Details \n 3.Book Appointment \n 4.Cancel AppointMent \n 5.LogOut");
+
+                 int op = Convert.ToInt32(Console.ReadLine());
+                 switch (op)
+                 {
+                     case 1:
+                         {
+                             p.addPatient();
+
+                             break;
+                         }
+                     case 2:
+                         {
+                             p.getDocDetails();
+                             break;
+                         }
+                     case 3:
+                         {
+                             p.AppointmentBooking();
+                             break;
+                         }
+                     case 4:
+                         {
+                             p.AppointmentCancel();
+                             break;
+                         }
+                     case 5:
+                         {
+                             Console.WriteLine("LogOut SuccessFully");
+                             break;
+                         }
+
+                     default:
+                         {
+                             Console.WriteLine("InValid Input");
+                             break;
+                         }
+
+                 }
+             }
+             else
+             {
+                 Console.WriteLine("Invalid Credentials");
+             }
 
         }
     }

@@ -82,6 +82,60 @@ namespace ClinicServ
             dAO = new ClinicDAO();
             return dAO.checkPatientId(id);
         }
+
+        public List<string> checkAvailability(int did,DateTime d)
+        {
+            List<string> str = new List<string>();
+
+            try
+            {
+                string[] arr = new string[10];
+               // List<string> str = new List<string>();
+                dAO = new ClinicDAO();
+                List<DateTime> dt = dAO.checkAvailability(did);
+                //11-18
+                // select TFrom, Tto from dbo.doctor where doctorId = 10
+               // select apptime where doctor id=12 and visit =given
+                    List<DateTime> appointed = dAO.checkAvailabilitytwo(did, d);
+                if (appointed != null)
+                {
+                    for (int i = dt[0].Hour; i <= dt[1].Hour; i++)
+                    {
+                        int j = 0;
+                        foreach (DateTime time in appointed)
+                        {
+                            if (i != time.Hour)
+                            {
+
+                                j++;
+
+                            }
+                        }
+                        if (j == appointed.Count)
+                        {
+                            str.Add(i.ToString() + ":00");
+                        }
+                        else
+                        {
+                            str.Add("NoT Available");
+                        }
+                    }
+                    return str;
+                }
+                else
+                {
+                    Console.WriteLine("Showing Null");
+                    return str;
+                }
+            }
+            catch(Exception e)
+            {
+              Console.WriteLine(e.Message+"OK");
+                return str;
+
+            }
+        }
+
     }
 }
 

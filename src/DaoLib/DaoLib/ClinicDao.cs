@@ -224,5 +224,68 @@ namespace DaoLib
             }
            // return 1;
         }
+
+
+        public List<DateTime> checkAvailability(int did)
+        {
+            try
+            {
+               // select appointmenttime from dbo.appointments where doctorid = 10 and visit = '11/03/2021'
+
+                List<DateTime> dt = new List<DateTime>();
+
+                con = getCon();
+                SqlCommand cmd = new SqlCommand("select TFrom, Tto from dbo.doctor where doctorId = @doctorid", con);
+                cmd.Parameters.AddWithValue("@doctorid", did);
+
+                var rdr = cmd.ExecuteReader();
+                while (rdr.Read())
+                {
+                    //(13,'Raja','Vikram','M','General','11:00','12:00')
+                     dt.Add(DateTime.Parse(rdr[0].ToString()));
+                    dt.Add(DateTime.Parse(rdr[1].ToString()));
+                  //  Console.WriteLine(ftime + "-" + ttime);
+                }
+                return dt;
+                }
+            catch (Exception  e)
+            {
+                Console.WriteLine(e.Message);
+
+                return null;
+            }
+
+        }
+        public List<DateTime> checkAvailabilitytwo(int did,DateTime d)
+        {
+            List<DateTime> dt = new List<DateTime>();
+
+            try
+            {
+                
+                //d=DateTime.Parse("11/03/2021");
+                con = getCon();
+                SqlCommand cmd = new SqlCommand("select appointmenttime from dbo.appointments where doctorid = @doctorid and visit = @visit", con);
+                cmd.Parameters.AddWithValue("@doctorid", did);
+                cmd.Parameters.AddWithValue("@visit", d.ToShortDateString());
+
+                var rdr = cmd.ExecuteReader();
+                while (rdr.Read())
+                {
+                  
+                    dt.Add(DateTime.Parse(rdr["appointmenttime"].ToString()));
+                    
+                }
+                return dt;
+            }
+            catch (Exception e)
+            {
+               
+                Console.WriteLine(e.Message);
+                return dt;
+                //return null;
+            }
+
+        }
     }
 }
