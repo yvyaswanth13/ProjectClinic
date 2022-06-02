@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 using BeanLib;
 using ClinicServ;
 using DaoLib;
+using System.Threading;
 namespace ClinicMgmtSys
 {
     public class Program
@@ -53,28 +54,43 @@ namespace ClinicMgmtSys
                         Console.WriteLine("Wrong Date Format");
 
                     }
-                    List<string> dt = cl.checkAvailability(docid, appdt);
-                    //Console.WriteLine(DateTime.Parse("11/04/2021") + "-" + dt.Count);
-                    foreach (var str in dt)
-                    {
-                        Console.Write(str+"\t");
-                    }
-                    Console.WriteLine("\nAppointMent Time");
-                    string apptime = Console.ReadLine();
+                        List<string> dt = cl.checkAvailability(docid, appdt);
 
-                    int succ = cl.ScheduleApp(new BeanLib.Appointment(appid, docid, pid, spec, appdt, apptime));
-                    //new Appointment(appid, docid, pid, spec, appdt, apptime);
-                    if (succ == 1)
+                    if (cl.availablehrs != cl.count)
                     {
-                        Console.WriteLine("Ok Schedule");
+                        //Console.WriteLine(DateTime.Parse("11/04/2021") + "-" + dt.Count);
+                        foreach (var str in dt)
+                        {
+                            Console.Write(str + "\t");
+                        }
+                        Console.WriteLine("\nAppointMent Time");
+                        string apptime = Console.ReadLine();
+
+                        int succ = cl.ScheduleApp(new BeanLib.Appointment(appid, docid, pid, spec, appdt, apptime));
+                        if (succ == 1)
+                        {
+                            Console.WriteLine("Ok Schedule");
+                        }
+                        else
+                        {
+                            Console.WriteLine("Not Schedule");
+                        }
                     }
                     else
                     {
-                        Console.WriteLine("Not Schedule");
+                        Console.WriteLine("Checking again...........\n");
+                        Thread.Sleep(1500);
+                        throw new SlotsNotAvailable("Yes...Currently No Slots are Avilable this Date!");
+
                     }
                 }
             }
-            catch(Exception e)
+            catch (SlotsNotAvailable sna)
+            {
+                Console.WriteLine(sna.Message);
+                
+            }
+            catch (Exception e)
             {
                 Console.WriteLine(e.Message);
             }
@@ -140,7 +156,6 @@ namespace ClinicMgmtSys
         }
         public Boolean frontEndValidation(Users u)
         {
-            // Boolean b = true;
             if (u.userId != null && u.Password != null)
             {
                 if (u.userId.Length > 10)
@@ -170,21 +185,6 @@ namespace ClinicMgmtSys
        
         public static void Main(string[] args)
         {
-            /*try
-            {
-                ClinicServiceImpl cl = new ClinicServiceImpl();
-                List<string> dt = cl.checkAvailability(12, DateTime.Now);
-                Console.WriteLine(DateTime.Parse("11/04/2021") + "-" + dt.Count);
-                foreach(var str in dt)
-                {
-                    Console.WriteLine(str);
-                }
-               
-            }
-            catch(Exception e)
-            {
-                Console.WriteLine(e.Message);
-            }*/
             Program p = new Program();
              Console.WriteLine("User and Passwor are Case Sensitive ");
              Console.WriteLine("Enter User: ");

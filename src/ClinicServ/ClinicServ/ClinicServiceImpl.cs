@@ -12,6 +12,8 @@ namespace ClinicServ
     {
         public List<BeanLib.Doctor> doc;
         public ClinicDAO dAO;
+         public int availablehrs;
+       public int count = 0;
         public int ScheduleApp(BeanLib.Appointment app)
         {
             dAO = new ClinicDAO();
@@ -89,17 +91,16 @@ namespace ClinicServ
 
             try
             {
-                string[] arr = new string[10];
-               // List<string> str = new List<string>();
                 dAO = new ClinicDAO();
                 List<DateTime> dt = dAO.checkAvailability(did);
-                //11-18
+                
                 // select TFrom, Tto from dbo.doctor where doctorId = 10
                // select apptime where doctor id=12 and visit =given
                     List<DateTime> appointed = dAO.checkAvailabilitytwo(did, d);
-                if (appointed != null)
+               availablehrs= dt[1].Hour - dt[0].Hour;
+                if (appointed != null && (!(appointed.Count == (dt[1].Hour - dt[0].Hour))))
                 {
-                    for (int i = dt[0].Hour; i <= dt[1].Hour; i++)
+                    for (int i = dt[0].Hour; i < dt[1].Hour; i++)
                     {
                         int j = 0;
                         foreach (DateTime time in appointed)
@@ -117,20 +118,32 @@ namespace ClinicServ
                         }
                         else
                         {
-                            str.Add("NoT Available");
+                            count++;
+                            //Console.WriteLine(availablehrs + " " + k);
+                            str.Add("NA");
                         }
+                    }
+                    if(availablehrs==count)
+                    {
+                        throw new SlotsNotAvailable("Currently No Slots are Avilable this Date!");
+
                     }
                     return str;
                 }
                 else
                 {
-                    Console.WriteLine("Showing Null");
-                    return str;
+                    throw new SlotsNotAvailable("Currently No Slots are Avilable this Date!");
+                   
                 }
+            }
+            catch(SlotsNotAvailable sna)
+            {
+                Console.WriteLine(sna.Message );
+                return str;
             }
             catch(Exception e)
             {
-              Console.WriteLine(e.Message+"OK");
+              
                 return str;
 
             }
@@ -138,10 +151,3 @@ namespace ClinicServ
 
     }
 }
-
-//namespace ClinicServ
-//{
-//    public class ClinicServiceImpl
-//    {
-//    }
-//}
