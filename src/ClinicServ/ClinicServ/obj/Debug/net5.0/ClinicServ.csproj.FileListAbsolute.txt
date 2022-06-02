@@ -14,4 +14,3 @@ C:\Users\Admin\source\repos\ClinicServ\ClinicServ\obj\Debug\net5.0\ClinicServ.cs
 C:\Users\Admin\source\repos\ClinicServ\ClinicServ\obj\Debug\net5.0\ClinicServ.dll
 C:\Users\Admin\source\repos\ClinicServ\ClinicServ\obj\Debug\net5.0\ref\ClinicServ.dll
 C:\Users\Admin\source\repos\ClinicServ\ClinicServ\obj\Debug\net5.0\ClinicServ.pdb
-C:\Users\Admin\source\repos\ClinicServ\ClinicServ\obj\Debug\net5.0\ClinicServ.csproj.AssemblyReference.cache
